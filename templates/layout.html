@@ -9,10 +9,10 @@
   </head>
   <body>
     <header id="header">
-      <h1>
+      <h1 id="project_title">
         <a href="/">TRELLO</a>
       </h1>
-        <nav>
+        <nav id="register_link">
           {% if current_user.is_authenticated %}
             <div>
               <span id="user-name">{{ current_user.email }}</span>
@@ -24,8 +24,12 @@
           {% endif %}
       </nav>
     </header>
+    
+    <div id="main_body">
       {% block content %}
       {% endblock content %}
+    </div>
+    
   </body>
 </html>
 
