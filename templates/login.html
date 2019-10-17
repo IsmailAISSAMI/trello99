@@ -2,6 +2,10 @@
 
 {% block title %}Log in{% endblock %}
 
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="/static/form.css" />
+{% endblock %}
+
 {% block content %}
 {% if error_msg %}
 <div class="error">
@@ -9,11 +13,8 @@
 </div>
 {% endif %}
 
-<h2>
-  Log in
-</h2>
-
-<form method="POST" action="/login">
+<form class="login_form" method="POST" action="/login">
+    <h2>Login</h2>
     <label>Email: <input type="email" name="email" /></label>
     <label>Password: <input type="password" name="password" /></label>
     <label>Remember me: <input type="checkbox" name="remember_me" /></label>
